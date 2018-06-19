@@ -1,0 +1,5 @@
+pre_tag = ""
+region = ""
+ecs_instance_count = 4
+bastion_key_pair_name = ""
+ecs_key_pair_name = ""
