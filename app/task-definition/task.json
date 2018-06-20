@@ -1,0 +1,22 @@
+[
+  {
+    "name": "node_app",
+    "image": "${ecr_uri}:${image_tag}",
+    "memory": 128,
+    "essential": true,
+    "portMappings": [
+      {
+        "containerPort": 3000,
+        "hostPort": 0
+      }
+    ],
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-group": "${env_tag}-${project}-node_app-${pre_tag}",
+        "awslogs-region": "${region}",
+        "awslogs-stream-prefix": "api"
+      }
+    }
+  }
+]

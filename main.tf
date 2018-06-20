@@ -49,3 +49,20 @@ module "ecs" {
   aws_private_subnet_ids = ["${module.network.private_subnet_ids}"]
   aws_security_group_ids = ["${module.security-groups.private_sg_id}"]
 }
+
+module "app" {
+  source                = "./app"
+  pre_tag               = "${var.pre_tag}"
+  env_tag               = "${var.pre_tag}"
+  region                = "${var.region}"
+  project               = "${var.project}"
+  vpc_id                = "${var.vpc_id}"
+  node_app_ecr_uri      = "${var.node_app_ecr_uri}"
+  node_app_image_tag    = "${var.node_app_image_tag}"
+  elb_port              = "${var.elb_port}"
+  node_app_min_capacity = "${var.node_app_min_capacity}"
+  node_app_max_capacity = "${var.node_app_max_capacity}"
+  ecs_cluster_name      = "${var.ecs_cluster_name}"
+  security_groups       = ["${module.security-groups.public_sg_id}"]
+  subnets               = ["${module.network.public_subnet_ids}"]
+}
