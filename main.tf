@@ -2,11 +2,11 @@ provider "aws" {
   region = "${var.region}"
 }
 
-# terraform {
-#   backend "s3" {
-#     encrypt = true
-#   }
-# }
+terraform {
+  backend "s3" {
+    encrypt = true
+  }
+}
 
 # Module network contains VPC, Subnets, Gatways and Route Tables.
 module "network" {
