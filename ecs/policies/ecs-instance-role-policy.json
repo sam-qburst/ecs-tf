@@ -12,6 +12,7 @@
         "ecs:StartTelemetrySession",
         "ecs:Submit*",
         "ecs:StartTask",
+        "ecr:*",
         "logs:*"
       ],
       "Resource": "*"

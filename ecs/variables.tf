@@ -51,7 +51,7 @@ variable "autoscale_max" {
 }
 
 variable "autoscale_desired" {
-  default     = "4"
+  default     = "1"
   description = "Desired autoscale (number of EC2)"
 }
 

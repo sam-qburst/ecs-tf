@@ -71,18 +71,16 @@ variable "node_app_ecr_uri" {
   description = "ECR Repository URI"
 }
 
-variable elb_port {
-  description = "port to expose the app in the elb"
-}
-
 variable "node_app_image_tag" {
   description = "Docker image tag in ECR"
 }
 
-variable "node_app_min_capacity" {
-  description = "Minimum number of containers to run"
-}
+# variable "node_app_min_capacity" {
+#   description = "Minimum number of containers to run"
+# }
 
-variable "node_app_max_capacity" {
-  description = "Maximum number of containers to run"
-}
+
+# variable "node_app_max_capacity" {
+#   description = "Maximum number of containers to run"
+# }
+

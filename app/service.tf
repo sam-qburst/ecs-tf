@@ -1,5 +1,5 @@
 data "aws_iam_role" "ecs_service_role" {
-  name = "AWSServiceRoleForECS"
+  name = "ecsServiceRole"
 }
 
 resource "aws_ecs_service" "node_app" {
